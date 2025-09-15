@@ -18,7 +18,7 @@ The goal was to evaluate the system’s **functionality, security, and validatio
 ---
 
 ## Tools & Technologies
-- **Python 3.12**  
+- **Python 3.10+**  
 - **Pytest** for test automation  
 - **Requests library** for API interaction  
 - Documentation in **Markdown & PDF**  
