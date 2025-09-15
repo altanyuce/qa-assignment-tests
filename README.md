@@ -1,32 +1,31 @@
-# User Management API - QA Testing Project  
+# QA Assignment – User Management API (Test Repository)
 
-## About this Project  
+## About this Project
 This repository was created as part of a **QA case study** for a User Management API.  
-The main goal was to evaluate the system’s **functionality, security, and validation** through:  
+The goal was to evaluate the system’s **functionality, security, and validation** through:  
 - **Manual exploratory testing**  
 - **Automated API testing** using `pytest`  
 - **Bug reporting and documentation** in Markdown/PDF  
 
 ---
 
-## Objectives  
-- Validate **core user flows**: create, read, update, delete (CRUD).  
-- Assess **authentication and session management**.  
+## Objectives
+- Validate **core user flows** (create, read, update, delete).  
+- Assess **authentication and session handling**.  
 - Check **input validation and search behavior**.  
 - Identify **security vulnerabilities** (authorization flaws, weak password hashing, info leaks).  
 
 ---
 
-## Tools & Technologies  
+## Tools & Technologies
 - **Python 3.12**  
 - **Pytest** for test automation  
 - **Requests library** for API interaction  
-- **cURL / Postman** for manual testing  
 - Documentation in **Markdown & PDF**  
 
 ---
 
-## Test Results  
+## Test Results
 - **Total automated test cases:** 11  
 - **Passed / Failed:** 9 / 2  
 - **Bugs discovered:** 10+  
@@ -38,7 +37,7 @@ The main goal was to evaluate the system’s **functionality, security, and vali
 
 ---
 
-## Key Findings (Sample)  
+## Key Findings (Sample)
 - **Pagination bug:** `GET /users?limit=1` returned 2 records.  
 - **Authorization flaw:** Any user could update/delete another user’s profile.  
 - **Sensitive info disclosure:** `/stats?include_details=true` exposed emails & session tokens.  
@@ -49,7 +48,7 @@ Full list available in [`bugs_report.md`](./bugs_report.md).
 
 ---
 
-## 📑 Deliverables  
+## 📑 Deliverables
 - [`bugs_report.md`](./bugs_report.md) – Detailed bug descriptions, reproduction steps, and evidence.  
 - [`test_report.md`](./test_report.md) – Executive summary, metrics, recommendations, and security assessment.  
 - [`tests/test_api.py`](./tests/test_api.py) – Automated pytest suite.  
@@ -59,12 +58,8 @@ Full list available in [`bugs_report.md`](./bugs_report.md).
 # How to Run
 
 ## Prerequisites
-- Python 3.10+
-- **Application dependencies (in the app repository):**
-  ```bash
-  pip install -r requirements.txt
-  ```
-- **Test dependencies (in this test repository):**
+- Python 3.10+  
+- Install test dependencies:
   ```bash
   pip install -r requirements_test.txt
   ```
