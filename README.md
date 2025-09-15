@@ -48,7 +48,7 @@ Full list available in [`bugs_report.md`](./bugs_report.md).
 
 ---
 
-## 📑 Deliverables
+## Deliverables
 - [`bugs_report.md`](./bugs_report.md) – Detailed bug descriptions, reproduction steps, and evidence.  
 - [`test_report.md`](./test_report.md) – Executive summary, metrics, recommendations, and security assessment.  
 - [`tests/test_api.py`](./tests/test_api.py) – Automated pytest suite.  
@@ -67,7 +67,9 @@ Full list available in [`bugs_report.md`](./bugs_report.md).
 ---
 
 ## Start the API
-Run the application locally **in a separate terminal** (from the app repository):
+
+Note: The API project itself is provided separately (outside this repo).
+Make sure the API is running locally before executing tests.
 
 Linux / macOS:
 ```bash
@@ -95,3 +97,13 @@ From this test repository, you can run the tests either using a pytest run confi
 ```bash
 pytest -q
 ```
+---
+
+## Troubleshooting
+- **Connection refused / 404**: Make sure the API is running at `http://localhost:8000`.  
+- **Different port**: If you started the API on a different port, update the `BASE_URL` in the test code accordingly.  
+- **`pytest: command not found`**: Install the test dependencies again:  
+  ```bash
+  pip install -r requirements_test.txt
+  ```
+- **Import errors**: Verify that you are running tests from the root of this repository.
