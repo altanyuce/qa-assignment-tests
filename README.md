@@ -1,4 +1,4 @@
-# QA Assignment – User Management API  
+# User Management API - QA Testing Project  
 
 ## About this Project  
 This repository was created as part of a **QA case study** for a User Management API.  
